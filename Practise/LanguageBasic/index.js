@@ -38,3 +38,20 @@ let finalValues = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]]
 
 console.log(tips)
 console.log(finalValues)
+
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear : 1990,
+    family: ['Jane','Mark','Bob','Emily'],
+    job: 'Teacher',
+    isMaried : false,
+    calcAge: function(birthYear){
+        this.age =  2018-this.birthYear;
+    }
+}
+
+
+john.calcAge();
+console.log(john)

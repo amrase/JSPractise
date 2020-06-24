@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Asynchronous JavaScript</title>
+</head>
+<body>
+    <h1>Asynchronous JavaScript</h1>
+    <script>
+        const getIds = new Promise((resovle,reject)=>{
+            setTimeout(()=>{
+                resovle([123,124,145,179]);
+            },1500)
+        })
+
+        getIds.then((resp)=>{
+            console.log('Resp',resp)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    </script>
+</body>
+</html>
+
+
+<!-- function getRecipe(){
+    setTimeout(()=>{
+        let recipeID = [123,124,145,167]
+        console.log(recipeID);
+
+        setTimeout(id=>{
+            let recipe = {
+                title: 'Fresh Tomato Pasta',
+                publisher : 'Jonas'
+            }
+            console.log(`${id} : ${recipe.title}`)
+            setTimeout(publisher=>{
+                let recipe2 = {
+                    title: 'Italia Pizaa',
+                    publisher : 'Jonas'
+                    
+                }
+                console.log(recipe)
+            },1500,recipe.publisher) 
+        },1000,recipeID[2])
+    },1500)
+}
+
+getRecipe(); -->
