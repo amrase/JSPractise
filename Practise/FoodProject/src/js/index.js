@@ -1,9 +1,18 @@
-import axios from 'axios'
+import Search from './models//Search'
 
-async function getResults(query) {
-    const resp = await axios(`https://forkify-api.herokuapp.com/api/search?q=${query}`)
-    console.log(resp.data.recipes)
+const state = {};
+
+const controlSearch = () =>{
+    // Get the query from the view
+    
 }
 
+document.querySelector('.search').addEventListener('submit',(e)=>{
+    e.preventDefault();
+    controlSearch();
+})
 
-getResults('pizza');
+const search = new Search('pizza')
+
+console.log(search)
+search.getResults();
